@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="images/th.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h1 class="my-5 text-center">BookMarker</h1>
+    <section class="container section1  py-3">
+        <h2 class="h3 text-center my-4"><i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i
+                class="fa-solid fa-bookmark"></i></h2>
+        <label for="siteName" class="form-label fw-bold"><i class="fa-solid fa-book-bookmark pe-1"></i> Site
+            Name</label>
+        <input oninput="validate(siteName,nameRegex)" type="text" id="siteName" class="form-control mb-3"
+            placeholder="WebSite Name">
+        <p class="error text-danger ms-1  d-none"> the name is invalid it must starts with Capital letter and at least 2
+            letters </p>
+        <label for="siteUrl" class="form-label fw-bold "><i class="fa-solid fa-link pe-1"></i> Site URL</label>
+        <input oninput="validate(siteUrl,urlRegex)" type="url" id="siteUrl" class="form-control mb-3"
+            placeholder="WebSite URL">
+        <p class="error text-danger ms-1  d-none"> the URL is invalid it must be like <span
+                class="fw-bold">https://example.[com,org,gov,net,dev]</span> </p>
+        <button id="btnAdd" onclick="addSite()" class="btn btn-danger py-1 px-5 my-3 d-block mx-auto">Submit</button>
+        <button id="btnUpdate" onclick="updateSite()"
+            class="btn btn-warning py-1 px-5 my-3 d-block mx-auto d-none">update</button>
+    </section>
+    <section class="container section2 mt-5">
+        <table class="table text-center">
+            <thead>
+                <tr>
+                    <th scope="col">S.NO</th>
+                    <th scope="col">SiteName</th>
+                    <th scope="col">SiteUrl</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+            </tbody>
+        </table>
+    </section>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

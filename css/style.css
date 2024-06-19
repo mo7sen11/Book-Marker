@@ -1,0 +1,68 @@
+body {
+  background-color: #f7ecde;
+}
+h1 {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;
+  position: relative;
+  width: fit-content;
+  margin: auto;
+}
+h1::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  left: 0;
+  background-color: #fec260;
+  transition: 0.4s all ease-in-out;
+  z-index: -1;
+}
+h1:hover::after {
+  height: 70%;
+}
+.section1 {
+  border: 3px dotted;
+  border-color: black transparent;
+}
+.section1 h2 {
+  background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+input.form-control:focus {
+    box-shadow: 0 0 0 .15rem #fec260;
+}
+
+/*section two style */
+ul.list-unstyled {
+  gap: 20px;
+}
+ul li button i {
+  padding-right: 10px;
+}
+
+/*media query for small screens to handle the buttons */
+@media (max-width: 768px) {
+  ul.list-unstyled {
+    gap: 5px;
+  }
+
+  button.btn {
+    padding: 5px 10px;
+  }
+  ul li span {
+    display: none;
+  }
+  ul li button i {
+    padding: 0;
+  }
+}
+.error
+{
+font-size: 15px;
+font-family: sans-serif;
+}
